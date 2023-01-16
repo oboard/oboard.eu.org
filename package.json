@@ -9,9 +9,11 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/tailwindcss": "^6.2.0",
     "daisyui": "^2.46.0",
     "nuxt": "^3.0.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/pwa": "^3.3.5"
   }
 }

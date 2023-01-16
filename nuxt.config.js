@@ -1,20 +1,18 @@
 export default {
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/pwa"],
+  ssr: true,
+  modules: ["@nuxtjs/tailwindcss"],
+  buildModules: ["@nuxtjs/pwa"],
   pwa: {
-    icon: {
-      source: "/icon2.png", //路径为static中的icon2.png
-      fileName: "icon2.png",
-    },
-
+    icon: false, // disables the icon module
     manifest: {
-      name: "oboard",
-      short_name: "oboard",
-      lang: "zh-CN",
-      theme_color: "#fff",
-      description: "一块小板子",
+      name: "My Awesome App",
+      lang: "zh",
+      // useWebmanifestExtension: false,
+      short_name: 'Nuxt.js PWA',
+      display: 'standalone',
     },
-    // workbox: {        //开发环境取消注释,调试pwa, 打包时注释
-    //   dev: true
-    // }
+    meta: {
+      mobileAppIOS: true,
+    },
   },
 };
