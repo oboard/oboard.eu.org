@@ -1,7 +1,6 @@
 <script setup>
 // @ts-nocheck
 
-let checkedBox = document.getElementById("my-drawer-3");
 defineProps({
   navigationTree: {
     type: Array,
@@ -9,13 +8,14 @@ defineProps({
   },
 });
 let closeDrawer = () => {
+  let checkedBox = document.getElementById("my-drawer-3");
   if (checkedBox.checked) checkedBox.click();
 };
 </script>
 
 <template>
   <li
-    :class="$route.path === item._path ? 'btn-primary rounded-xl mb-1' : 'mb-1'"
+    :class="$route.path === item._path ? 'btn-primary rounded-lg mb-1' : 'mb-1'"
     v-for="(item, index) in navigationTree"
     :key="index"
   >

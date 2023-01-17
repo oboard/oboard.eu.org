@@ -1,5 +1,5 @@
 export default {
-  ssr: true,
+  ssr: false,
   modules: ["@nuxt/content", "@nuxtjs/tailwindcss"],
   content: {
     highlight: {

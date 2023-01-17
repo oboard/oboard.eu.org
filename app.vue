@@ -66,20 +66,16 @@
       <div class="drawer-side">
         <label for="my-drawer-3" class="drawer-overlay"></label>
         <ul class="menu p-4 w-80 bg-base-100">
-          <AppNavigation :navigation-tree="navigation"/>
+          <AppNavigation :navigation-tree="navigation" />
         </ul>
       </div>
     </div>
   </div>
 </template>
 <script setup>
-let items = [
-  { name: "主页", url: "/" },
-  { name: "关于", url: "/about" },
-];
-// @ts-ignore
+// @ts-nocheck
+
 const { data: navigation } = await useAsyncData("navigation", () => {
-  // @ts-ignore
   return fetchContentNavigation();
 });
 </script>
