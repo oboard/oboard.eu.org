@@ -47,13 +47,18 @@
         <!-- Page content here -->
         <!-- 路由出口 -->
         <div class="flex flex-row items-start">
-          <ul class="menu px-4 pt-24 w-64 min-h-screen bg-base-200 hidden lg:block overflow-y-scroll">
-            <!-- Sidebar content here -->
+          <!-- <ul
+            class="menu px-4 pt-24 w-64 min-h-screen bg-base-200 hidden lg:block overflow-y-scroll"
+          >
             <li v-for="item in items">
-              <NuxtLink :to="item.url">{{
-                item.name
-              }}</NuxtLink>
+              <NuxtLink :to="item.url">{{ item.name }}</NuxtLink>
             </li>
+          </ul> -->
+
+          <ul
+            class="navigation menu px-4 pt-24 w-64 min-h-screen bg-base-200 hidden lg:block overflow-y-scroll"
+          >
+            <AppNavigation :navigation-tree="navigation" />
           </ul>
           <NuxtPage class="flex-1 px-4 pt-24 overflow-y-scroll" />
         </div>
@@ -61,12 +66,7 @@
       <div class="drawer-side">
         <label for="my-drawer-3" class="drawer-overlay"></label>
         <ul class="menu p-4 w-80 bg-base-100">
-          <!-- Sidebar content here -->
-          <li v-for="item in items">
-            <NuxtLink :to="item.url" @click="closeDrawer()">{{
-              item.name
-            }}</NuxtLink>
-          </li>
+          <AppNavigation :navigation-tree="navigation"/>
         </ul>
       </div>
     </div>
@@ -77,5 +77,9 @@ let items = [
   { name: "主页", url: "/" },
   { name: "关于", url: "/about" },
 ];
-let closeDrawer = () => document.getElementById("my-drawer-3").click();
+// @ts-ignore
+const { data: navigation } = await useAsyncData("navigation", () => {
+  // @ts-ignore
+  return fetchContentNavigation();
+});
 </script>
