@@ -10,10 +10,9 @@
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.2.0",
-    "daisyui": "^2.46.0",
-    "nuxt": "^3.0.0"
+    "daisyui": "^2.46.0"
   },
   "devDependencies": {
-    "@nuxtjs/pwa": "^3.3.5"
+    "nuxt": "^3.0.0"
   }
 }
