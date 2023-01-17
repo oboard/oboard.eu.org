@@ -1,4 +1,14 @@
 export default {
   ssr: true,
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: ["@nuxt/content", "@nuxtjs/tailwindcss"],
+  content: {
+    highlight: {
+      preload: [
+        'javascript',
+        'typescript',
+        'vue',
+        'vue-html'
+      ],
+    },
+  },
 };
