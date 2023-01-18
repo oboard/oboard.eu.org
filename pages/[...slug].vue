@@ -1,5 +1,5 @@
 <template>
-  <main class="prose text-left">
+  <main class="prose text-left w-full">
     <ContentRenderer v-if="data" :value="data" />
   </main>
 </template>

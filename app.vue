@@ -2,10 +2,10 @@
   <div class="">
     <div class="drawer">
       <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content flex flex-col">
+      <div class="drawer-content flex flex-col h-screen overflow-y-hidden">
         <!-- Navbar -->
         <div
-          class="w-full navbar fixed bg-base-100 bg-opacity-80 backdrop-blur-md shadow shadow-gray-200 dark:shadow-gray-900"
+          class="w-full navbar z-10 bg-base-100 shadow shadow-gray-200 dark:shadow-gray-900"
         >
           <div class="flex-none lg:hidden">
             <label for="my-drawer-3" class="btn btn-square btn-ghost">
@@ -46,7 +46,7 @@
         </div>
         <!-- Page content here -->
         <!-- 路由出口 -->
-        <div class="flex flex-row items-start">
+        <div class="w-full flex-1 overflow-y-scroll">
           <!-- <ul
             class="menu px-4 pt-24 w-64 min-h-screen bg-base-200 hidden lg:block overflow-y-scroll"
           >
@@ -55,17 +55,23 @@
             </li>
           </ul> -->
 
-          <ul
-            class="navigation menu px-4 pt-24 w-64 min-h-screen bg-base-200 hidden lg:block overflow-y-scroll"
+          <div class="fixed w-64 min-h-screen bg-base-200 hidden lg:block">
+            <ul
+            class="menu p-4 flex flex-col-reverse justify-end"
           >
             <AppNavigation :navigation-tree="navigation" />
           </ul>
-          <NuxtPage class="flex-1 px-4 pt-24 overflow-y-scroll" />
+          </div>
+          <div class="flex-1 mx-4 pb-24 lg:ml-80 py-16">
+            <div class="flex justify-center">
+              <NuxtPage />
+            </div>
+          </div>
         </div>
       </div>
       <div class="drawer-side">
         <label for="my-drawer-3" class="drawer-overlay"></label>
-        <ul class="menu p-4 w-80 bg-base-100">
+        <ul class="menu p-4 w-80 bg-base-100 flex-col-reverse justify-end">
           <AppNavigation :navigation-tree="navigation" />
         </ul>
       </div>
@@ -79,3 +85,4 @@ const { data: navigation } = await useAsyncData("navigation", () => {
   return fetchContentNavigation();
 });
 </script>
+<style></style>
