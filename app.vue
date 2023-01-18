@@ -5,7 +5,7 @@
       <div class="drawer-content flex flex-col h-screen overflow-y-hidden">
         <!-- Navbar -->
         <div
-          class="w-full navbar z-10 bg-base-100 shadow shadow-gray-200 dark:shadow-gray-900"
+          class="w-full navbar sticky z-10 bg-base-100 shadow shadow-gray-200 dark:shadow-gray-900"
         >
           <div class="flex-none lg:hidden">
             <label for="my-drawer-3" class="btn btn-square btn-ghost">
