@@ -15,9 +15,9 @@ let closeDrawer = () => {
 
 <template>
   <div v-for="(item, index) in navigationTree">
-    <div v-if="item.children" class="border-l border-l-primary pl-2 mt-4">
+    <div v-if="item.children" class="border-l border-l-primary pl-4 mt-4">
       {{ item.title }}
-      <div class="ml-2 mt-2">
+      <div class="mt-2">
         <AppNavigation
           :navigation-tree="item.children"
         />
