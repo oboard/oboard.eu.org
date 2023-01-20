@@ -94,3 +94,4 @@ yarn.lock
 pnpm-lock.yaml
 nuxt.config.ts
 .output
+.vercel
