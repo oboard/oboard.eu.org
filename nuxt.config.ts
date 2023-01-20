@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: ["@nuxt/content", "@nuxtjs/tailwindcss"],
+  plugins: ["plugins/echarts"],
   app: {
     head: {
       title: "一块小板子",

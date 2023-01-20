@@ -1,4 +1,7 @@
 <template>
-  <ContentDoc class="prose" />
+  <div>
+    <HomeChart></HomeChart>
+    <ContentDoc class="prose" />
+  </div>
 </template>
 <script setup></script>
