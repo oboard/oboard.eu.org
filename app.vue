@@ -24,7 +24,7 @@
               </svg>
             </label>
           </div>
-          <div class="flex-1 px-2 mx-2">
+          <div class="flex-1">
             <a class="btn btn-ghost normal-case text-xl gap-2">
               <div class="avatar">
                 <div class="w-10 mask mask-squircle">
@@ -33,34 +33,17 @@
                   />
                 </div>
               </div>
-              一块小板子
+              <span>一块小板子</span>
             </a>
           </div>
-          <!-- <div class="flex-none hidden lg:block">
-            <ul class="menu menu-horizontal rounded-box">
-              <li v-for="item in items">
-                <NuxtLink :to="item.url">{{ item.name }}</NuxtLink>
-              </li>
-            </ul>
-          </div> -->
         </div>
         <!-- Page content here -->
         <!-- 路由出口 -->
         <div class="w-full flex-1 overflow-y-scroll">
-          <!-- <ul
-            class="menu px-4 pt-24 w-64 min-h-screen bg-base-200 hidden lg:block overflow-y-scroll"
-          >
-            <li v-for="item in items">
-              <NuxtLink :to="item.url">{{ item.name }}</NuxtLink>
-            </li>
-          </ul> -->
-
           <div class="fixed w-64 min-h-screen bg-base-200 hidden lg:block">
-            <ul
-            class="menu p-4 flex flex-col-reverse justify-end"
-          >
-            <AppNavigation :navigation-tree="navigation" />
-          </ul>
+            <ul class="menu p-4 flex flex-col-reverse justify-end">
+              <AppNavigation :navigation-tree="navigation" />
+            </ul>
           </div>
           <div class="flex-1 mx-4 pb-24 lg:ml-80 py-16">
             <div class="flex justify-center">
